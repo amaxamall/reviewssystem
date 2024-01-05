@@ -1,0 +1,504 @@
+/* google font link */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+/* font awesome cdn link */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css');
+:root{
+	--main-color: #f70776;
+	--red: #680747;
+	--light-color: #999;
+	--black:#130f40;
+	--white:#fff;
+	--box-shadow: 0 .5rem 1 rem rgba(0,0,0,.1);
+}
+*{
+	font-family: 'comfortaa', cursive;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	text-decoration: none;
+	scrollbar-color: var(--main-color);
+	scrollbar-width: thin;
+}
+html{
+	font-size: 62.5%;
+	overflow-x: hidden;
+}
+section{
+	background-image: url('image/bg.jpg');
+	width: 100%;
+	padding: 2rem;
+	padding-bottom: 8rem;
+	position: relative;
+}
+section .img{
+	position: absolute;
+	right: 5%;
+	top: 20%;
+}
+section .img1{
+	position: absolute;
+	left: 5%;
+	bottom: 0;
+}
+.heading{
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 3rem;
+	margin-top: 15rem;
+	margin-bottom: 3rem;
+	color: var(--red);
+	font-weight: bold;
+}
+.heading h1{
+	margin-bottom: 2rem;
+}
+.btn,
+.delete-btn, .update-btn{
+	width: auto;
+	background: var(--main-color);
+	color: #fff;
+	cursor: pointer;
+	padding: 1rem;
+	border-radius: 5px;
+	margin: 1rem auto;
+	font-size: 2rem;
+	border: none;
+	text-transform: capitalize;
+	display: inline;
+}
+.delete-btn{
+	background: var(--red);
+}
+
+.update-btn{
+	background-color: violet;
+}
+
+.update-btn:hover{
+	background: transparent;
+	border: 1px solid violet;
+	color: violet;
+}
+
+.editclss{
+	background-color: transparent;
+	padding: 5em;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.imagecol{
+	width: 30%;
+}
+
+.formcol{
+	width: 70%;
+	padding-left: 2em;
+}
+
+.btn:hover{
+	background: transparent;
+	border: 1px solid var(--main-color);
+	color: var(--main-color);
+}
+.delete-btn:hover{
+	background: transparent;
+	border: 1px solid var(--red);
+	color: var(--red);
+}
+.empty{
+	background: var(--red);
+	border-radius: .5rem;
+	color: #fff;
+	padding: 1.5rem;
+	font-size: 1.8rem;
+	text-align: center;
+	width: 100%;
+	box-shadow: var(--box-shadow);
+	margin: 1 rem auto;
+	max-width: 1000px;
+	margin: 1rem auto;
+	text-transform: capitalize;
+}
+.header{
+	position: sticky;
+	top: 0;
+	left: 0;
+	right: 0;
+	box-shadow: var(--box-shadow);
+	z-index: 1200;
+	background: #fff;
+}
+.header .flex{
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+}
+.header .flex .navbar #user-btn,
+.header .flex .navbar a{
+	height: 4.2rem;
+	width: 4.5rem;
+	line-height: 4.2rem;
+	font-size: 2rem;
+	color: var(--black);
+	background: #fff;
+	border-radius: .5rem;
+	text-align: center;
+	margin-left: .5rem;
+	cursor: pointer;
+}
+.header .flex .navbar #user-btn:hover,
+.header .flex .navbar a:hover{
+	background: var(--main-color);
+	color: var(--white);
+}
+.header .flex .profile{
+	position: absolute;
+	top: 120%;
+	right: 2rem;
+	background: var(--white);
+	box-shadow: var(--box-shadow);
+	padding: 2rem;
+	text-align: center;
+	width: 33rem;
+	border-radius: .5rem;
+	border: 1px solid lightgray;
+	overflow-x: hidden;
+	transform: scale(0);
+	transform-origin: top right;
+}
+.header .flex .profile.active{
+	transform: scale(1.0);
+	transition: .2s linear;
+}
+.header .flex .profile p{
+	overflow-x: hidden;
+	text-overflow: ellipsis;
+	color: var(--light-color);
+	font-size: 1.8rem;
+	padding-bottom: .5rem;
+	text-transform: capitalize;
+}
+.header .flex .profile .image{
+	height: 10rem;
+	width: 10rem;
+	padding: .5rem;
+	border-radius: 50%;
+	border: 2px solid var(--main-color);
+	object-fit: cover;
+	margin-bottom: 1.5rem;
+}
+.header .flex .profile .flex-btn{
+	display: flex;
+}
+.header .flex .profile .flex-btn .btn,
+.header .flex .profile .flex-btn .delete-btn{
+	width: 49%;
+	font-size: 14px;
+}
+.banner{
+	width: 100%;
+	height: 30em;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+.banner img{
+	position: absolute;
+	opacity: 1;
+	display: block;
+	object-fit: contain;
+}
+.banner .img{
+	top: 20%;
+	right: 0;
+	width: 40%;
+}
+.banner .img1{
+	top: 30%;
+	left: 10%;
+	z-index: 1000;
+	width: 50%;
+}
+.banner .img2{
+	bottom: -20%;
+	left: 5%;
+	z-index: 1000;
+	width: 35%;
+}
+.banner .img3{
+	right: 3%;
+	top: 10%;
+	width: 100px;
+}
+.banner .img4{
+	top: -4%;
+	left: 25%;
+	width: 200px;
+}
+.account-form,
+.add-drama{
+	width: 100%;
+}
+.account-form form,
+.add-drama form{
+	box-shadow: var(--box-shadow);
+	padding: 2rem;
+	background: #fff; border-radius: .5rem;
+	max-width: 45vw;
+	margin: 0 auto;
+}
+.account-form p,
+.add-drama p{
+	padding-top: 1rem;
+	font-size: 1.6rem;
+	color: var(--light-color);
+	text-transform: capitalize;
+}
+.account-form span,
+.add-drama span{
+	color: red;
+}
+.account-form .box,
+.add-drama form .input{
+	width: 100%;
+	border-radius: .5rem;
+	padding: 1.4rem;
+	font-size: 1.8rem;
+	box-shadow: var(--box-shadow);
+	border: 1px solid lightgray;
+	margin: 1rem 0;
+}
+.account-form form textarea{
+	height: 15rem;
+	resize: none;
+}
+.account-form form .image{
+	height: 20rem;
+	width: 20rem;
+	object-fit: contain;
+	margin-top: .5rem;
+}
+.account-form form .link{
+	padding: 1rem 0;
+	text-transform: capitalize;
+	font-size: 1.8rem;
+	color: var(--light-color);
+}
+.account-form form .link a{
+	color: var(--main-color);
+}
+.account-form form .link a:hover{
+	text-decoration: underline;
+}
+.account-form .flex-btn{
+	display: flex;
+}
+.account-form .flex-btn .btn{
+	width: 50%;
+}
+
+.editlabel {
+  background-color: indigo;
+  color: white;
+  padding: 1em;
+  font-family: sans-serif;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  margin-top: 1em;
+
+    display: inline-block;
+}
+
+.all_posts .box-container{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, 40rem);
+	gap: 1.5rem;
+	align-items: center;
+	justify-content: center;
+}
+.all_posts .box-container .box{
+	background: #fff;
+	box-shadow: var(--box-shadow);
+	border-radius: .5rem;
+	padding: 2rem;
+	border: 1px solid lightgray;
+	overflow-x: hidden;
+}
+.all_posts .box-container .box .image{
+	width: 100%;
+	height: 30rem;
+	border-radius: .5rem;
+	object-fit: contain;
+	margin-bottom: 1.5rem;
+}
+.all_posts .box-container .box .title{
+	font-size: 2rem;
+	text-transform: capitalize;
+	text-overflow: ellipsis;
+	overflow-x: hidden;
+}
+.all_posts .box-container .box .total-reviews{
+	font-size: 1.7rem;
+	padding: 1rem 0;
+	margin: 1rem 0;
+}
+.all_posts .box-container .box .total-reviews i{
+	color: orange;
+}
+.all_posts .box-container .box .total-reviews span{
+	color: var(--light-color);
+}
+.all_posts .box-container .btn{
+	width: 200%;
+	margin: 1rem 0;
+}
+.view-post .row{
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	gap: 2rem;
+	background: #fff;
+	box-shadow: var(--box-shadow);
+	padding: 2rem;
+	border-radius: .5rem;
+	border: 1px solid lightgray;
+}
+.view-post .row .col{
+	flex: 1 1 40rem;
+}
+.view-post .row .col .image{
+	margin-left: 15rem;
+	width: 80%;
+	top: 50%;
+	border-radius: .5rem;
+	object-fit: cover;
+	margin-bottom: 1.5rem;
+}
+.view-post .row .col .title{
+	font-size: 2rem;
+	text-transform: capitalize;
+	text-align: center;
+}
+.view-post .row .col .flex{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+	align-items: center;
+	justify-content: space-evenly;
+}
+.view-post .row .col .total-reviews{
+	text-align: center;
+}
+.view-post .row .col .total-reviews h3{
+	font-size: 7rem;
+}
+.view-post .row .col .total-reviews i{
+	font-size: 3rem;
+	color: orange;
+}
+.view-post .row .col .total-reviews p{
+	font-size: 1.8rem;
+	color: var(--light-color);
+	padding-top: 1rem;
+}
+.view-post .row .col .flex .total-ratings{
+	font-size: 2rem;
+}
+.view-post .row .col .flex .total-ratings p{
+	padding: .3rem 0;
+}
+.view-post .row .col .flex .total-ratings p i{
+	color: orange;
+}
+.view-post .row .col .flex .total-ratings p span{
+	color: var(--light-color);
+}
+.reviews-container .box-container{
+	display: grid;
+	row-gap: 3rem;
+	background: #fff;
+	box-shadow: var(--box-shadow);
+	border: 1px solid lightgray;
+	border-radius: .5rem;
+	padding: 2rem;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.reviews-container .box-container .box{
+	border-bottom: 1px solid lightgray;
+	overflow-x: hidden;
+	padding-bottom: 1.5rem;
+	position: relative;
+}
+.reviews-container .box-container .box .user{
+	display: flex;
+	align-items: center;
+	gap: 1.5rem;
+	margin-bottom: 1rem;
+}
+.reviews-container .box-container .box .user img{
+	height: 8rem;
+	width: 8rem;
+	border-radius: 50%;
+	border: 2px solid var(--main-color);
+	object-fit: cover;
+	padding: .5rem;
+}
+.reviews-container .box-container .box .user h3{
+	font-size: 2.5rem;
+	height: 6rem;
+	width: 6rem;
+	border-radius: 50%;
+	background: var(--light-color);
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 6.5rem;
+}
+.reviews-container .box-container .box .user p{
+	font-size: 1.8rem;
+	text-overflow: ellipsis;
+	overflow-x: hidden;
+	padding-bottom: .3rem;
+}
+.reviews-container .box-container .box .user span{
+	color: var(--light-color);
+	font-size: 1.5rem;
+}
+.reviews-container .box-container .box .ratings{
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 10;
+}
+.reviews-container .box-container .box .ratings p{
+	border-radius: .5rem;
+	color: #fff;
+	padding: .5rem 1rem;
+}
+.reviews-container .box-container .box .ratings p span{
+	font-size: 1.5rem;
+}
+.reviews-container .box-container .box .title{
+	font-size: 2rem;
+	color: gray;
+	padding: .5rem 0;
+}
+.reviews-container .box-container .box .description{
+	font-size: 1.6rem;
+	white-space: pre-line;
+	color: var(--light-color);
+	line-height: 1.5;
+}
+.reviews-container .delete-btn{
+	width: 20%;
+}
