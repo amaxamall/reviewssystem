@@ -20,7 +20,7 @@
             $fetch = $verify_email->fetch(PDO::FETCH_ASSOC);
             $verify_pass = password_verify($pass, $fetch['password']);
            
-           // If pass verification is successful, set a cookie and redirect
+           // If password verification is successful, set a cookie and redirect
             if ($verify_pass == 1) {
                 setcookie('user_id', $fetch['id'], time() + 60*60*24*30, '/');
                 header('location:all_posts.php');
